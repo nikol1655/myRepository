@@ -26,7 +26,7 @@ public class Main {
         List<Long> numbers = new ArrayList<>();
         do {
             System.out.println("Type the number from 1 to 1000");
-            number = scanner.nextLong();
+            number = scanner.nextInt();
             if (number >= 1 && number <= 1000) {
                 numbers.add(number);
                 System.out.println("Type END if you want to finish");
