@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  </head>
+  <body>
+    
+
+    <div class="container">
+      <button class="button" onclick="refreshPage()">Play again</button>
+      <button id="button" role="button" class="button">Let's celebrate it!</button>
+  </div>
+
+    <div class="container">
+      <h1>Refresh Me</h1>
+
+
+      <div class="dice">
+        <p>Player 1</p>
+        <img class="img1" src="images/dice6.png" alt="dice">
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img class="img2" src="images/dice6.png" alt="dice">
+      </div>
+    </div>
+
+    <canvas id="confetti"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script src="script.js"></script>
+  </body>
+
+  <footer>
+    <script src="index.js" charset="utf-8"></script>
+    www 🎲 Dicee Game 🎲 com
+  </footer>
+</html>
