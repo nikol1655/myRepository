@@ -1,12 +1,19 @@
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+
 import java.io.*;
 import java.util.List;
 
 public class Main {
-
+    static Logger logger = Logger.getLogger(Main.class);
     public static void main(String[] args) throws IOException {
-
+        BasicConfigurator.configure();
+        logger.warn("Application has started");
+        logger.warn("Start sorting data");
         List<String> sortedList = sortList(getList());
+        logger.warn("Starting creation of the file");
         createCsvFile(sortedList);
+        logger.warn("Application has finished");
 
     }
 
@@ -20,7 +27,7 @@ public class Main {
 
     private static List<String> sortList(List<String> list) {
         List<String> sortedList = list.stream().sorted().toList();
-        sortedList.forEach(System.out::println);
+        sortedList.forEach(element -> logger.info(element));
         return sortedList;
     }
 
@@ -51,7 +58,7 @@ public class Main {
 
 
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            logger.error("File not found exception",e);
         }
     }
 
