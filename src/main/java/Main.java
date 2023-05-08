@@ -11,6 +11,9 @@ public class Main {
     static Logger logger = Logger.getLogger(Main.class);
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
+        MyInterfaceManager manager = new MyInterfaceManager();
+        manager.start();
+
         BasicConfigurator.configure();
         logger.warn("Application has started");
 
